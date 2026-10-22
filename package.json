@@ -1,0 +1,65 @@
+{
+  "name": "dsh-auto-prompt",
+  "version": "0.3.0",
+  "description": "一句话变成可用的图片/视频提示词；打开生成开关后直接调用你的本地模型或 API 出图出片。",
+  "icon": "assets/icon.svg",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./src/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "locale",
+    "assets",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-client-plugin",
+    "image-generation",
+    "video-generation",
+    "prompt"
+  ],
+  "license": "MIT",
+  "author": "Kaitox326",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaitox326/dsh-auto-prompt.git"
+  },
+  "homepage": "https://github.com/Kaitox326/dsh-auto-prompt#readme",
+  "bugs": {
+    "url": "https://github.com/Kaitox326/dsh-auto-prompt/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=0.1.2-rc.1",
+    "@deepseek-ai/dsh-tools": ">=0.1.2-rc.1",
+    "@deepseek-ai/dsh-settings": ">=0.1.2-rc.1",
+    "@deepseek-ai/dsh-attachment": ">=0.1.2-rc.1",
+    "@deepseek-ai/schemastery": ">=0.1.2-rc.1"
+  }
+}

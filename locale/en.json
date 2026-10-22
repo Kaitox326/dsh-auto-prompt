@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Auto prompt",
+    "description": "A sentence becomes a usable image or video prompt; flip the generation switch to render it through your own model or API."
+  }
+}

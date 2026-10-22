@@ -1,0 +1,14 @@
+# 依赖与打包产物
+node_modules/
+*.tgz
+
+# 插件运行产物（默认输出目录）
+outputs/
+.dsh-output/
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

@@ -1,0 +1,7 @@
+# dsh-auto-prompt — bundle layer.
+# Installed as a package (or via `dsh plugin add`), this inserts the plugin into
+# the profile composition. For a local, un-packaged install use
+# `node scripts/install.mjs` instead, which writes an absolute source path.
+- insert:
+    - id: dsh-auto-prompt
+      name: 'dsh-auto-prompt'
